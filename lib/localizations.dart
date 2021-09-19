@@ -17,7 +17,7 @@ class AppLocalizations {
   static final Map<String, Map<String, String>> _localizedValue = {
     '': {
       'en': '',
-      'zh': '',
+      'ch': '',
       'th': '',
       'mm': '',
     },
@@ -36,9 +36,12 @@ class AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {
   const AppLocalizationsDelegate();
 
   @override
-  bool isSupported(Locale locale) {
-    throw UnimplementedError();
-  }
+  bool isSupported(Locale locale)   bool isSupported(Locale locale) => [
+    'en',
+    'ch',
+    'th',
+    'mm',
+  ].contains(locale.languageCode);
 
   @override
   Future<AppLocalizations> load(Locale locale) {
