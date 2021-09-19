@@ -6,7 +6,7 @@ String? locale;
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
-  const String locale = '';
+  const String locale = 'en';
 
   runApp(const MyApp(locale: locale));
 }
@@ -51,7 +51,7 @@ class _MyAppState extends State<MyApp> {
       },
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
-        title: 'Ethical Info 2D',
+        title: 'Ethical',
         theme: ThemeData(),
         navigatorKey: navigatorKey,
         localizationsDelegates: const [
